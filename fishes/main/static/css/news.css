@@ -1,0 +1,29 @@
+.stats{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    position: relative;
+    background-color: aliceblue;
+    width: 24%;
+    left: 38%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.stats p{
+    font-size: 160%;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.stats li{
+    margin: 1%;
+    font-size: 130%;
+    list-style-type: none;
+    position: relative;
+    left: -5%;
+}
+
+.annotation{
+    margin-top: 2%;
+    font-size: 160%;
+}

@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/posts.css'%}" type="text/css">
+{% endblock %}
+{% block title %}{{ blog.title }}{% endblock %}
+{% block content %}
+{% if blog.author_id == request.user.id %}
+<p class="form-title">Поделитесь со всеми новым постом:</p>
+<form action="{% url 'blog_by_id' blog.id %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="subject" maxlength="80" size="83" placeholder="Заголовок поста" value="{{ subject }}"/>
+    <br/>
+    {% if subject_error %}
+    <p style="color:red;">{{ subject_error }}</p>
+    {% endif %}
+    <textarea name="text" maxlength="4096" rows="10" cols="80" placeholder="Тело поста">{{ text }}</textarea>
+    {% if text_error %}
+    <p style="color:red;">{{ text_error }}</p>
+    {% endif %}
+    <br/>
+    <input type="file" name="image">
+    <input type="submit" value="Опубликовать пост" />
+</form>
+{% endif %}
+<ul class="post">
+    {% for post in posts %}
+    <li><p class="date">{{ post.created_at }}</p><br/>
+        <b>{{ post.subject }}</b><br/>
+        {% if post.image %}
+        <img src="{{ post.image.url }}"/>
+        {% endif %}
+        <p>{{ post.text }}</p>
+        <a href="delete/{{post.id}}">Удалить</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

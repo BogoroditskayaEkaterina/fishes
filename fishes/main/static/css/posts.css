@@ -1,0 +1,48 @@
+.form-title{
+    font-size: 140%;
+    font-weight: bold;
+}
+
+.post {
+	margin-top: 5%;
+	font-size: 120%;
+	padding: 1.5%;
+}
+
+.post li{
+ 	background-color: aliceblue;
+    list-style-type: none;
+    width: 90%;
+    border-radius: 10px;
+	position: relative;
+	float: left;
+	left: 5%;
+	border: 3px solid #fff;
+	outline: 2px solid cornflowerblue;
+}
+
+.date {
+    float: left;
+    font-size: 120%;
+    color: white;
+    border-radius: 5px;
+    background-color: #323039;
+    padding: 5px;
+}
+
+.post b{
+    border-radius: 5px;
+	float: left;
+	left: 100%;
+    width: 100%;
+    padding: 3px;
+    font-size: 120%;
+    text-decoration: underline;
+}
+
+.post img{
+    width: 30%;
+    height: 30%;
+	outline: 2px solid #323039;
+	margin: 15px;
+}

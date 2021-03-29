@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/news.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/posts.css'%}" type="text/css">
+{% endblock %}
+{% block content %}
+<div class = "stats">
+    <p>Статистика по сайту:</p>
+    <ul>
+        <li>Количество блогов на сайте: {{ amount_blogs}}</li>
+        <li>Количество постов на сайте: {{ amount_posts }}</li>
+    </ul>
+</div>
+<p class="annotation">Последний пост на сайте от автора: <br> {{ last_post.blog.author}}</p>
+<ul class="post">
+    <li><p class="date">{{ last_post.created_at }}</p><br/>
+        <b>{{ last_post.subject }}</b><br/>
+        {% if last_post.image %}
+        <img src="{{ last_post.image.url }}"/>
+        {% endif %}
+        <p>{{ last_post.text }}</p>
+    </li>
+</ul>
+{% endblock %}

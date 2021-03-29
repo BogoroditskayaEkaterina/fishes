@@ -1,0 +1,35 @@
+.blog {
+	font-size: 120%;
+	padding: 3%;
+}
+
+.blog li{
+ 	background-color: aliceblue;
+    list-style-type: none;
+    width: 90%;
+    border-radius: 10px;
+	position: relative;
+	float: left;
+	left: 5%;
+	border: 3px solid #fff;
+	outline: 2px solid cornflowerblue;
+	padding: 1%;
+}
+
+.blog_author{
+    font-style: italic;
+    font-size: 80%;
+    padding: 1%;
+}
+
+.blog_number{
+    float: center;
+    font-size: 60%;
+}
+
+.blog b{
+    background-color: #40E0D0;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+}

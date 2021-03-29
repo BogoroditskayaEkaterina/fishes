@@ -1,0 +1,46 @@
+body {
+     background-image: url("../img/main-back.jpg");
+}
+
+.container{
+    background-color: white;
+    width: 30%;
+    height: 400px;
+    margin-top: 15%;
+    border: 4px solid black;
+    border-radius: 15px;
+    padding: 3%;
+}
+
+table {
+  margin-top: 5%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 25px;
+}
+
+th {
+  font-weight: normal;
+  border-bottom: 2px solid;
+  padding: 10px 8px;
+}
+
+td {
+  padding: 9px 8px;
+  transition: .3s linear;
+}
+
+.but{
+    margin-left: 40%;
+    border-radius: 5px;
+    background-color: #323039;
+    color: white;
+    font-weight: bold;
+    margin-top: 10%;
+    margin-bottom: 3%;
+}
+
+.forma a{
+   margin-left: 35%;
+   font-weight: bold;
+}

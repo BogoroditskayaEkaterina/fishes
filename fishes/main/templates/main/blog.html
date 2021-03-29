@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/blogs.css'%}" type="text/css">
+{% endblock %}
+{% block content %}
+<h2>
+    <ul class="blog">
+        {% for blog in blogs %}
+        <li>
+            <a href="{% url 'blog_by_id' blog.id %}"><b>{{ blog.title }}</b></a>
+            <p class="blog_author">Автор: {{ blog.author }}</p>
+            <p class="blog_number">Количество постов: {{ blog.post_count }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</h2>
+{% endblock %}
